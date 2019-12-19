@@ -6,10 +6,10 @@ var company = encodeURIComponent(we.authMgr.getUser().profile.firma);
 var email = encodeURIComponent(we.authMgr.getUser().profile.publicEmailAddress.toLowerCase());
 var size = "&size=220x220&margin=0";
 
-if(phone in window) {
+if(phone in window == false) {
     phone = "";
     }
-if(email in window) {
+if(email in window == false) {
     email = "";
 }
 
