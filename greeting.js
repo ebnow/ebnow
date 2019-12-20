@@ -14,9 +14,13 @@ if (time >= 18) {
     var greeting = "Guten Abend";
     var emoji = "🌛";
 }
-if (date === "6.12." || date === "24.12." || date === "25.12." || date === "26.12.") {
+if (date === "6.12.") {
     var greeting = "Ho, ho, ho";
     var emoji = "🎅";
+}
+if (date === "24.12." || date === "25.12." || date === "26.12.") {
+    var greeting = "Frohe Weihnachten";
+    var emoji = "🎅🎄";
 }
 if (date === "1.1.") {
     var greeting = "Frohes neues Jahr";
