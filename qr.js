@@ -11,7 +11,7 @@ if(phone === null) {
 
 var mobile = we.authMgr.getUser().profile.mobilnummer;
 
-if(mobile === null) {
+if(mobile === undefined) {
     mobile = "";
     } else{
       mobile = "%0ATEL%3BCELL%3A" + encodeURIComponent(mobile)
