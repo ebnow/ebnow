@@ -5,12 +5,12 @@ const id = we.authMgr.getSessionID();
 const currentDate = (today.getDate() <= 9 ? "0" : "" ) + today.getDate() + "." + ((today.getMonth() + 1) <= 9 ? "0" : "" ) + (today.getMonth() + 1) + ".";
 
 const USER_ENTITY = "user"
-const request = new XMLHttpRequest();
+var birthdayRequest = new XMLHttpRequest();
 
-request.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=5&extended=false");
-request.addEventListener('load', function(event) {
-   if (request.status >= 200 && request.status < 300) {
-         let response = JSON.parse(request.responseText);
+birthdayRequest.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=5&extended=false");
+birthdayRequest.addEventListener('load', function(event) {
+   if (birthdayRequest.status >= 200 && birthdayRequest.status < 300) {
+         let response = JSON.parse(birthdayRequest.responseText);
          const data = response.data;
 
          let birthdayMessage = "";
@@ -39,4 +39,4 @@ request.addEventListener('load', function(event) {
     }
 });
 
-request.send();
+birthdayRequest.send();
