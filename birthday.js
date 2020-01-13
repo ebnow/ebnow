@@ -2,7 +2,7 @@ const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const today = new Date();
 const url = "https://de.eyo.net/api/users";
-const id = "1th9ukqjzxho71tsm8y3lwtz6l47953";
+const id = we.authMgr.getSessionID();
 
 const currentDate = today.getDate() + "." + ((today.getMonth() + 1) <= 9 ? "0" : "" ) + (today.getMonth() + 1) + ".";
 
@@ -34,7 +34,7 @@ request.addEventListener('load', function(event) {
             
 
             if (greetingSelector) {
-                greetingSelector.innerHTML = greetingMessage.link(profileLink);
+                greetingSelector.innerHTML = birthdayMessage;
             } else {
                 console.log("This didn't work. Try again");
             };
