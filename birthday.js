@@ -21,7 +21,7 @@ request.addEventListener('load', function(event) {
                 if(user.entityType == USER_ENTITY){
                    // User has birthday today
                    if(user.profile.geburtsdatum.substring(0, 6) == currentDate) {
-                    birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> hat heute Geburtstag!</br>';
+                    birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> hat heute Geburtstag! 🎉</br>';
                    }
                 }
             });
