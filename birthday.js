@@ -2,11 +2,10 @@ const today = new Date();
 const url = "https://de.eyo.net/api/users";
 const id = we.authMgr.getSessionID();
 
-const currentDate = today.getDate() + "." + ((today.getMonth() + 1) <= 9 ? "0" : "" ) + (today.getMonth() + 1) + ".";
+const currentDate = (today.getDate() <= 9 ? "0" : "" ) + today.getDate() + "." + ((today.getMonth() + 1) <= 9 ? "0" : "" ) + (today.getMonth() + 1) + ".";
 
 const USER_ENTITY = "user"
 let request = new XMLHttpRequest();
-console.log(currentDate);
 
 request.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=5&extended=false");
 request.addEventListener('load', function(event) {
