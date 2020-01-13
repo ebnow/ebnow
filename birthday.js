@@ -14,7 +14,7 @@ var loadBirthday = function () {
              let response = JSON.parse(birthdayRequest.responseText);
              const data = response.data;
     
-             let birthdayMessage = "Heute hat leider niemand Geburtstag";
+             let birthdayMessage = "";
             
              if(data) {
                 data.forEach(user => {
