@@ -27,9 +27,7 @@ var loadBirthday = function () {
                     }
                 });
     
-                var greetingSelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');
-                //var profileLink = "/profile/" + we.authMgr.getUser().id;
-                
+                var greetingSelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
     
                 if (greetingSelector) {
                     greetingSelector.innerHTML = birthdayMessage;
