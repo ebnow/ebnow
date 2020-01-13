@@ -24,13 +24,15 @@ var loadBirthday = function () {
                        if(user.profile.geburtsdatum.substring(0, 6) == currentDate) {
                         birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> 🎉' + ' ';
                        }
+                    } else {
+                        console.log("Kein Geburtstag heute")
                     }
                 });
     
-                var greetingSelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
+                var birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
     
-                if (greetingSelector) {
-                    greetingSelector.innerHTML = birthdayMessage;
+                if (birthdaySelector) {
+                    birthdaySelector.innerHTML = birthdayMessage;
                 } else {
                     console.log("This didn't work. Try again");
                 };
