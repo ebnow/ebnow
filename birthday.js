@@ -1,5 +1,3 @@
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
 const today = new Date();
 const url = "https://de.eyo.net/api/users";
 const id = we.authMgr.getSessionID();
