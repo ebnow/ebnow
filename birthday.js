@@ -8,7 +8,7 @@ var loadBirthday = function () {
     const USER_ENTITY = "user"
     const birthdayRequest = new XMLHttpRequest();
     
-    birthdayRequest.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=5&extended=false");
+    birthdayRequest.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=10&extended=false");
     birthdayRequest.addEventListener('load', function(event) {
        if (birthdayRequest.status >= 200 && birthdayRequest.status < 300) {
              let response = JSON.parse(birthdayRequest.responseText);
