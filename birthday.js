@@ -22,7 +22,7 @@ var loadBirthday = function () {
                     if(user.entityType == USER_ENTITY){
                        // User has birthday today
                        if(user.profile.geburtsdatum.substring(0, 6) == currentDate) {
-                        birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a>' + ' ';
+                        birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> 🎉' + ' ';
                        }
                     }
                 });
