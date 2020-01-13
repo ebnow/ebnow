@@ -26,11 +26,9 @@ var loadBirthday = function () {
                        }
                     }
                 });
-    
-                
-             } else {birthdayMessage = "No birthday"}
+             } else {birthdayMessage = "Heute hat niemand Geburtstag. Wünsche deinen Kollegen doch trotzdem einen schönen Tag 🙂"}
 
-             var birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
+            var birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
     
                 if (birthdaySelector) {
                     birthdaySelector.innerHTML = birthdayMessage;
