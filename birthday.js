@@ -14,7 +14,7 @@ var loadBirthday = function () {
              let response = JSON.parse(birthdayRequest.responseText);
              const data = response.data;
     
-             let birthdayMessage = "";
+             let birthdayMessage = "Heute hat leider niemand Geburtstag";
             
              if(data) {
                 data.forEach(user => {
@@ -23,7 +23,7 @@ var loadBirthday = function () {
                        // User has birthday today
                        if(user.profile.geburtsdatum.substring(0, 6) == currentDate) {
                         birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> 🎉' + ' ';
-                       } else {birthdayMessage = "Heute hat leider niemand Geburtstag"}
+                       }
                     }
                 });
     
