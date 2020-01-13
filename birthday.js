@@ -34,7 +34,7 @@ var loadBirthday = function () {
                 } else {
                     console.log("This didn't work. Try again");
                 };
-             }
+             } else {console.log("No birthday")}
         }
     });
     
