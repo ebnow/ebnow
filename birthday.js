@@ -5,7 +5,7 @@ const id = we.authMgr.getSessionID();
 const currentDate = (today.getDate() <= 9 ? "0" : "" ) + today.getDate() + "." + ((today.getMonth() + 1) <= 9 ? "0" : "" ) + (today.getMonth() + 1) + ".";
 
 const USER_ENTITY = "user"
-let request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 
 request.open("GET",url + ";wesessid=" + id + "?query=" + currentDate + "&limit=5&extended=false");
 request.addEventListener('load', function(event) {
