@@ -27,14 +27,16 @@ var loadBirthday = function () {
                     }
                 });
     
-                var birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
+                
+             } else {birthdayMessage = "No birthday"}
+
+             var birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthday"]');                
     
                 if (birthdaySelector) {
                     birthdaySelector.innerHTML = birthdayMessage;
                 } else {
                     console.log("This didn't work. Try again");
                 };
-             } else {console.log("No birthday")}
         }
     });
     
