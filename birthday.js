@@ -23,7 +23,7 @@ var loadBirthday = function () {
                        // User has birthday today
                        if(user.profile.geburtsdatum.substring(0, 6) == currentDate) {
                         birthdayMessage += '<a href="/profile/' + user.id + '">' + user.firstName + ' ' + user.lastName + '</a> 🎉' + ' ';
-                       }
+                       } else {birthdayMessage = "Heute hat leider niemand Geburtstag"}
                     }
                 });
     
