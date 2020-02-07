@@ -18,8 +18,12 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="countdown"
   var countdownMessage = "Noch " + days + "T " + hours + "h " + minutes + "m " + seconds + "s bis zur IT Cloud";
-  document.getElementById("countdown").innerHTML = countdownMessage;
-
+  var countdownSelector = document.getElementById("countdown");
+  
+  if(countdownSelector) {
+    countdownSelector.innerHTML = countdownMessage;
+  }
+  
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
