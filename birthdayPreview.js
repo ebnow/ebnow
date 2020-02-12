@@ -9,7 +9,7 @@ function loadDoc() {
 }
   
 function load(offset) {
-  if(offset > 7) {
+  if(offset > 30) {
     return;
   }
   
