@@ -1,7 +1,8 @@
-let birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthdays"]');
+function birthdays() {
 const url = "https://de.eyo.net/api/users";
 const id = we.authMgr.getSessionID();
 const USER_ENTITY = "user"
+let birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthdays"]');
 
 
 function loadDoc() {
@@ -51,3 +52,5 @@ function birthdayMessage(responseText) {
  }
  
 loadDoc();
+}
+birthdays()
