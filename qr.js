@@ -1,7 +1,26 @@
 var color = "&color=90-40-115"
-var firstName = encodeURIComponent(we.authMgr.getUser().firstName);
-var lastName = encodeURIComponent(we.authMgr.getUser().lastName);
+var firstName = we.authMgr.getUser().firstName;
+var lastName = we.authMgr.getUser().lastName;
 var phone = we.authMgr.getUser().phoneNumber;
+
+//replace all umlauts in firstName and lastName
+firstName = firstName.replace(/\u00e4/g, "ae");
+firstName = firstName.replace(/\u00c4/g, "Ae");
+firstName = firstName.replace(/\u00d6/g, "Oe");
+firstName = firstName.replace(/\u00f6/g, "oe");
+firstName = firstName.replace(/\u00dc/g, "Ue");
+firstName = firstName.replace(/\u00fc/g, "ue");
+firstName = firstName.replace(/\u00df/g, "ss");
+
+lastName = lastName.replace(/\u00e4/g, "ae");
+lastName = lastName.replace(/\u00c4/g, "Ae");
+lastName = lastName.replace(/\u00d6/g, "Oe");
+lastName = lastName.replace(/\u00f6/g, "oe");
+lastName = lastName.replace(/\u00dc/g, "Ue");
+lastName = lastName.replace(/\u00fc/g, "ue");
+lastName = lastName.replace(/\u00df/g, "ss");
+//
+
 
 if(phone === null) {
     phone = "";
