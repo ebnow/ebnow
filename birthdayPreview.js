@@ -1,9 +1,10 @@
+
 function birthdays() {
 const url = "https://de.eyo.net/api/users";
 const id = we.authMgr.getSessionID();
 const USER_ENTITY = "user"
 let birthdaySelector = document.querySelector('.external-script-widget[data-widget-id="birthdays"]');
-
+birthdaySelector.innerHTML=""
 
 function loadDoc() {
   load(-7);
@@ -28,8 +29,11 @@ function afterFirst(x, offset) {
 }
   
 function myAwesomeBirthdayStuff(offset, responseText) {
-  birthdaySelector.innerHTML +=
-      dateWithOffset(offset) + ": " + birthdayMessage(responseText)  + "<br>";
+  let partyPopper = "";
+  if(offset == 0){
+    partyPopper = " 🎉🎉🎉 ";
+  }
+  birthdaySelector.innerHTML += dateWithOffset(offset) + ": " + partyPopper + birthdayMessage(responseText)  + "<br>";
 }
  
 function dateWithOffset(offset) {
@@ -42,7 +46,7 @@ function dateWithOffset(offset) {
 function birthdayMessage(responseText) {
     const data = JSON.parse(responseText).data;
     if (typeof data === 'undefined') {
-       return "Keine Geburtstage";
+       return "Keine Geburtstage 😔";
     }
      return data
        .filter(user => user.entityType === USER_ENTITY)
