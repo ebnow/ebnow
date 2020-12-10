@@ -3,7 +3,7 @@ inputForZoomId = document.createElement('input');
 buttonForZoomId = document.createElement('button');
 buttonForZoomId.textContent = 'Zoom öffnen'
 buttonForZoomId.onclick = function() {
-  window.open('https://zoom.us/wc/' + inputForZoomId.value, '_blank');
+  window.open('https://zoom.us/wc/join/' + inputForZoomId.value, '_blank');
 }
 
 linkGenerator = document.getElementById('link-generator');
